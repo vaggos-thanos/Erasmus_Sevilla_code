@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/index.css') }}"> -->
+    <!--https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <title>Color Picker RGB LED Arduino</title>
+    <!-- <input type='color' name='color2' value='#3355cc' /> -->
+    <style>
+        div {
+            max-width: 200px;
+            height: 100px;
+            background-color: powderblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3><strong>Color Picker RGB LED Arduino
+            </strong></h3>
+    </header>
+    <form action="http://localhost:5001/send_color_code" method="POST">
+        <div>
+            <input type='color' name='color' />
+        </div>
+        <p><input type="submit" value="submit" /></p>
+    </form>
+
+</body>
+
+
+</html>
